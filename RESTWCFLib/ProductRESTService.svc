@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RESTWCFLib.ProductRESTService" CodeBehind="ProductRESTService.svc.cs" %>

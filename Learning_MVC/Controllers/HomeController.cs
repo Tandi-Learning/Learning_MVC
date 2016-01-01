@@ -10,7 +10,9 @@ namespace Learning_MVC.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            LearningSvcRef.ServiceClient svcObj = new LearningSvcRef.ServiceClient();
+            string value = svcObj.GetData(10);
+            return View((object)value);
         }
 
         public ActionResult About()
