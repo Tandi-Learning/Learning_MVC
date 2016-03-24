@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "JQueryPromises";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/PageScripts/JQueryPromises.js"></script>
+
+<h2>JQuery Promises</h2>
+
+<input type="button" value="Get Data" id="GetData" />
+
+<ul id="MovieList"></ul>
+<ul id="MusicList"></ul>
+<div id="result"></div>
+<div id="error"></div>
+
+<script>
+    var getMoviesURL = '@Url.Action("GetMovies", "Lesson1")';
+    var getMusicURL = '@Url.Action("GetMusic", "Lesson1")';
+</script>
