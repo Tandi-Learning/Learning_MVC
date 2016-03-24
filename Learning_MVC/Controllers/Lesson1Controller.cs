@@ -40,5 +40,10 @@ namespace Learning_MVC.Controllers
 
             return Json(music, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult ModulesInject()
+        {
+            return View();
+        }
     }
 }
