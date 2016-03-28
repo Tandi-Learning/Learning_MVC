@@ -45,5 +45,10 @@ namespace Learning_MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult TSHelloWorld()
+        {
+            return View();
+        }
     }
 }
