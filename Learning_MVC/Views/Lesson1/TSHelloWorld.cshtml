@@ -1,4 +1,5 @@
-﻿
+﻿@model Learning_MVC.Models.VerifyPhoneNumberViewModel
+
 @{
     ViewBag.Title = "TSHelloWorld";
 }
@@ -7,3 +8,4 @@
 
 <h2>TypeScript HelloWorld</h2>
 
+@Html.BootstrapTextBoxFor(m => m.PhoneNumber, new { @class = "form-control", type="number" })

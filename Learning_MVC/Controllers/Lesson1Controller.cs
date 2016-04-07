@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Learning_MVC.Models;
 
 namespace Learning_MVC.Controllers
 {
@@ -48,7 +49,9 @@ namespace Learning_MVC.Controllers
 
         public ActionResult TSHelloWorld()
         {
-            return View();
+            VerifyPhoneNumberViewModel viewmodel = new VerifyPhoneNumberViewModel();
+            viewmodel.PhoneNumber = "240-516-7514";
+            return View(viewmodel);
         }
     }
 }
