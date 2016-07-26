@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning_MVC", "Learning_MVC\Learning_MVC.csproj", "{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{FC1D52A5-DE4D-4BD0-9C21-5B72554B2780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{C0E1837E-1D70-4CAA-8E68-8B508FABF64B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{FC1D52A5-DE4D-4BD0-9C21-5B72554B2780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC1D52A5-DE4D-4BD0-9C21-5B72554B2780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC1D52A5-DE4D-4BD0-9C21-5B72554B2780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E1837E-1D70-4CAA-8E68-8B508FABF64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E1837E-1D70-4CAA-8E68-8B508FABF64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E1837E-1D70-4CAA-8E68-8B508FABF64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E1837E-1D70-4CAA-8E68-8B508FABF64B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
