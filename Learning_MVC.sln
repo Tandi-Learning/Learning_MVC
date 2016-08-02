@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{89DDEB71-8FE2-4503-AC96-0B877E08F3E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientData", "PatientData\PatientData.csproj", "{F9487660-2890-4148-B747-88C02DE77CD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{89DDEB71-8FE2-4503-AC96-0B877E08F3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89DDEB71-8FE2-4503-AC96-0B877E08F3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89DDEB71-8FE2-4503-AC96-0B877E08F3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9487660-2890-4148-B747-88C02DE77CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9487660-2890-4148-B747-88C02DE77CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9487660-2890-4148-B747-88C02DE77CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9487660-2890-4148-B747-88C02DE77CD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
