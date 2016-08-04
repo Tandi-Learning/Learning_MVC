@@ -15,7 +15,7 @@ namespace PatientData.App_Start
         {
             var patients = PatientDB.Open();
 
-            if (!patients.AsQueryable().Any(p => p.Name == "Tandi"))
+            if (!patients.AsQueryable().Any(p => p.Name == "John"))
             {
                 var data = new List<Patient>
                 {
