@@ -19,7 +19,7 @@ namespace PerfSurf.Counters
         {
             get
             {
-                return _counter.NextValue;
+                return _counter.NextValue();
             }
         }
         PerformanceCounter _counter;
