@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-4">
         <input type="text" placeholder="Message" data-bind="value:message" />
-        <button class="btn btn-primary" data-bind="click:sendMessage">Send</button>
+        <button class="btn btn-primary btn-sm" data-bind="click:sendMessage">Send</button>
     </div>
     <div class="col-md-4">
         <div data-bind="foreach:messages">
@@ -16,10 +16,11 @@
     </div>
 </div>
 
+
 <div class="row" data-bind="foreach:counters">
-    <div class="col-md-12">
+    <div class="col-md-12" >
         <h2 data-bind="text:name"></h2>
-        <canvas width="800" height="100" data-bind="attr:{'id': name}"></canvas>
+        <canvas width="800" height="150" data-bind="attr:{'id': name}"></canvas>
     </div>
 </div>
 
