@@ -17,9 +17,23 @@ namespace RESTWCFLib
 
         [OperationContract]
         [WebInvoke(Method = "GET",
-            ResponseFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.Bare,
             UriTemplate = "GetProductList/")]
         List<Product> GetProductList();
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "GetProduct/{id}")]
+        Product GetProduct(string id);
+
+        [OperationContract]
+        [WebGet(
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "GetProduct2/{id}")]
+        Product GetProduct2(string id);
     }
 }

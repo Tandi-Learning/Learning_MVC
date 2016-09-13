@@ -39,9 +39,9 @@ namespace RESTWCFLib
         private List<Product> _products = new List<Product>()
         {
             new Product() { ProductId = 1, Name = "Product 1", CategoryName = "Category 1", Price = 10 },
-            new Product() { ProductId = 1, Name = "Product 2", CategoryName = "Category 2", Price = 20 },
-            new Product() { ProductId = 1, Name = "Product 3", CategoryName = "Category 3", Price = 30 },
-            new Product() { ProductId = 1, Name = "Product 4", CategoryName = "Category 4", Price = 40 }
+            new Product() { ProductId = 2, Name = "Product 2", CategoryName = "Category 2", Price = 20 },
+            new Product() { ProductId = 3, Name = "Product 3", CategoryName = "Category 3", Price = 30 },
+            new Product() { ProductId = 4, Name = "Product 4", CategoryName = "Category 4", Price = 40 }
         };
     }
 }

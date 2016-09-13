@@ -15,6 +15,16 @@ namespace RESTWCFLib
         {
         }
 
+        public Product GetProduct(string id)
+        {
+            return Products.instance.ProductList.Where(p => p.ProductId == Int32.Parse(id)).FirstOrDefault();
+        }
+
+        public Product GetProduct2(string id)
+        {
+            return Products.instance.ProductList.Where(p => p.ProductId == Int32.Parse(id)).FirstOrDefault();
+        }
+
         public List<Product> GetProductList()
         {
             return Products.instance.ProductList;
