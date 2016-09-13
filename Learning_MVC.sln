@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning_MVC", "Learning_MVC\Learning_MVC.csproj", "{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5C3B8296-92DB-4853-B060-EEA6E2A39903} = {5C3B8296-92DB-4853-B060-EEA6E2A39903}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFLib", "WCFLib\WCFLib.csproj", "{5C3B8296-92DB-4853-B060-EEA6E2A39903}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTWCFLib", "RESTWCFLib\RESTWCFLib.csproj", "{7A9EE274-7098-4E11-8A7C-E84F541C3CD2}"
 EndProject
@@ -29,6 +24,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsClient", "CorsClient\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfSurf", "PerfSurf\PerfSurf.csproj", "{BD3A05D1-DF1C-4AE9-8020-4AAFF427E3A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSvcApp", "WCFSvcApp\WCFSvcApp.csproj", "{F3EC982A-B25B-48D8-9D9C-56691313961C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSvcAppClient", "WCFSvcAppClient\WCFSvcAppClient.csproj", "{83A773EC-097E-4427-8565-CA2D28E1D1D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3EC982A-B25B-48D8-9D9C-56691313961C} = {F3EC982A-B25B-48D8-9D9C-56691313961C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApi", "MVCWebApi\MVCWebApi.csproj", "{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +43,6 @@ Global
 		{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C3B8296-92DB-4853-B060-EEA6E2A39903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C3B8296-92DB-4853-B060-EEA6E2A39903}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C3B8296-92DB-4853-B060-EEA6E2A39903}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C3B8296-92DB-4853-B060-EEA6E2A39903}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A9EE274-7098-4E11-8A7C-E84F541C3CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A9EE274-7098-4E11-8A7C-E84F541C3CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9EE274-7098-4E11-8A7C-E84F541C3CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +71,18 @@ Global
 		{BD3A05D1-DF1C-4AE9-8020-4AAFF427E3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3A05D1-DF1C-4AE9-8020-4AAFF427E3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3A05D1-DF1C-4AE9-8020-4AAFF427E3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EC982A-B25B-48D8-9D9C-56691313961C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EC982A-B25B-48D8-9D9C-56691313961C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EC982A-B25B-48D8-9D9C-56691313961C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EC982A-B25B-48D8-9D9C-56691313961C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A773EC-097E-4427-8565-CA2D28E1D1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A773EC-097E-4427-8565-CA2D28E1D1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A773EC-097E-4427-8565-CA2D28E1D1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A773EC-097E-4427-8565-CA2D28E1D1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
