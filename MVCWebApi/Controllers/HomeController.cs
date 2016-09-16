@@ -14,5 +14,10 @@ namespace MVCWebApi.Controllers
 
             return View();
         }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
     }
 }

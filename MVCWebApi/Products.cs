@@ -43,5 +43,10 @@ namespace MVCWebApi
             new Product() { ProductId = 3, Name = "Product 3", CategoryName = "Category 3", Price = 30 },
             new Product() { ProductId = 4, Name = "Product 4", CategoryName = "Category 4", Price = 40 }
         };
+
+        public void AddProduct(Product product)
+        {
+            _products.Add(product);
+        }
     }
 }

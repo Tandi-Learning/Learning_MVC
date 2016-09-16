@@ -22,13 +22,15 @@ namespace MVCWebApi.Controllers
         }
 
         // POST: api/Product
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Product product)
         {
+            Products.instance.ProductList.Add(product);
         }
 
         // PUT: api/Product/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Product product)
         {
+            Products.instance.ProductList.Add(product);
         }
 
         // DELETE: api/Product/5
