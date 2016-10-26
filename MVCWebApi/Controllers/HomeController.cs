@@ -6,6 +6,12 @@ using System.Web.Mvc;
 
 namespace MVCWebApi.Controllers
 {
+    public class InputData
+    {
+        public string Message { get; set; }
+        public string Dummy { get; set; }
+    }
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -18,6 +24,11 @@ namespace MVCWebApi.Controllers
         public ActionResult AddProduct()
         {
             return View();
+        }
+
+        public ActionResult Copyright(InputData inData)
+        {
+            return PartialView("", inData);
         }
     }
 }

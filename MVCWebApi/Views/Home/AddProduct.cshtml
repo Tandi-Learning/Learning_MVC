@@ -9,7 +9,7 @@
 @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "addProductForm" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />
@@ -49,6 +49,17 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+@Html.Action("Copyright", "Home", new { Message = "Copyright [c]", Dummy = "" })
+@{
+    Html.RenderAction("Copyright", "Home", new { Message = "Copyright <c>...", Dummy = "" });
+}
+@{
+    Html.RenderPartial("Copyright", new MVCWebApi.Controllers.InputData { Message = "Copyright {c}", Dummy = "" } );
+}
+
+@Html.Partial("Copyright", new MVCWebApi.Controllers.InputData { Message = "Copyright \\c/", Dummy = "" })
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
