@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSvcAppClient", "WCFSvcAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApi", "MVCWebApi\MVCWebApi.csproj", "{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApiClient", "MVCWebApiClient\MVCWebApiClient.csproj", "{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
