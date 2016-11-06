@@ -7,8 +7,26 @@ using System.Web.Http;
 
 namespace MVCWebApi.Controllers
 {
+    public interface ITest
+    {
+        void Foo();
+    }
+
+    public class Test : ITest
+    {
+        public void Foo()
+        {
+        }
+    }
+
     public class ProductController : ApiController
     {
+        private ITest _test;
+        public ProductController(ITest test)
+        {
+            _test = test;
+        }
+
         // GET: api/Product
         public IEnumerable<Product> Get()
         {
