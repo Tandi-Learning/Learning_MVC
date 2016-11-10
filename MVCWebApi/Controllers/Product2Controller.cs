@@ -49,8 +49,17 @@ namespace MVCWebApi.Controllers
         public IHttpActionResult Get()
         {
             IEnumerable<Product> products = Products.instance.ProductList;
-            //            return Ok<IEnumerable<Product>>(products);
-            return new ProductsResult(products, Request);
+            // return Ok<IEnumerable<Product>>(products);
+            //return new ProductsResult(products, Request);
+            return CreateResult(products);
+        }
+
+        private IHttpActionResult CreateResult(IEnumerable<Product> products)
+        {
+            HttpResponseMessage responseMessage = new HttpResponseMessage(HttpStatusCode.OK);
+            responseMessage.Content = new ObjectContent<IEnumerable<Product>>(products, new JsonMediaTypeFormatter());
+            IHttpActionResult response = ResponseMessage(responseMessage);
+            return response;
         }
 
         // GET api/<controller>/5
