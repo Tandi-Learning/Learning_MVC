@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Web;
+using System.Text;
 using System.Web.Mvc;
 
 namespace MVCWebApiClient.Controllers
@@ -37,8 +37,13 @@ namespace MVCWebApiClient.Controllers
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("aplication/json"));
 
-            HttpResponseMessage response = client.GetAsync(new Uri("http://localhost:55467/api/Product")).Result;
-            string content = response.Content.ReadAsStringAsync().Result;
+            // ** Method 1. Use GetAsync and ReadAsStringAsync **
+            //HttpResponseMessage response = client.GetAsync(new Uri("http://localhost:55467/api/Product")).Result;
+            //string content = response.Content.ReadAsStringAsync().Result;
+
+            // ** Method 2. Use GetStringAsync **
+            string content = client.GetStringAsync(new Uri("http://localhost:55467/api/Product")).Result;
+
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(content);
 
             return Json(new { ProductsResult = products }, JsonRequestBehavior.AllowGet);
@@ -51,7 +56,16 @@ namespace MVCWebApiClient.Controllers
 
         public ActionResult UseHttpWebRequest()
         {
-            return Json(new { value = "UseHttpWebRequest" }, JsonRequestBehavior.AllowGet);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost:55467/api/Product");
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream stream = response.GetResponseStream();
+
+            StreamReader streamReader = new StreamReader(stream, Encoding.UTF8);
+            string data = streamReader.ReadToEnd();
+
+            List<Product> products = JsonConvert.DeserializeObject<List<Product>>(data);
+
+            return Json(new { ProductsResult = products }, JsonRequestBehavior.AllowGet);
         }
     }
 }
