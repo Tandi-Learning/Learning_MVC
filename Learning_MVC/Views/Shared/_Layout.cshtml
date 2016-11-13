@@ -18,6 +18,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,6 +32,7 @@
                             <li>@Html.ActionLink("JQuery Promises", "JQueryPromises", "Lesson1")</li>
                             <li>@Html.ActionLink("Angular Modules Inject", "ModulesInject", "Lesson1")</li>
                             <li>@Html.ActionLink("TypeScript HelloWorld", "TSHelloWorld", "Lesson1")</li>
+                            <li>@Html.ActionLink("Bootstrap Modal Dialog", "BootstrapModal", "Lesson1")</li>
                         </ul>
                     </li>
                 </ul>
@@ -48,5 +51,27 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <div class="modal fade" id="glossaryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document" style="overflow-y: scroll; max-width:50%; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
+            <div class="modal-content">
+                @*<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>*@
+                <div class="modal-body">
+                    <div>Mass Effect is a science-fiction role-playing action game developed by BioWare for the Xbox 360 and later ported to the PC and the PlayStation 3. It is the first installment of the Mass Effect trilogy.</div>
+                    <div>Mass Effect was released on November 20, 2007 in North America, November 22, 2007 in Australia and New Zealand, and on November 23, 2007 in Europe. It was also released as a Limited Collector's Edition, containing bonus materials including an art book and the Galactic Codex: Essentials Edition 2183 booklet, which gives background on the Mass Effect universe.</div>
+                    <div>The game was later re-released by BioWare and Demiurge Studios for the PC, and the PC-DVD version was released in Summer 2008. By Summer 2008 there were also versions of the game translated into Spanish, French and Italian. A Japanese-language version was in development for the Xbox 360 only. Mass Effect is available via Xbox's Games on Demand. A Platinum Hits version of Mass Effect for Xbox 360 was also released, and included a bonus disc containing the game's soundtrack, the Bring Down the Sky DLC pack, trailers for the game, and pictures and themes for Xbox Live profiles. </div>
+                    <div>Act 1 begins when Shepard receives the Stop the Collectors master mission along with command of the Normandy SR-2 and continues until the mission to Horizon, which is activated as soon as Shepard has recruited all four of Mordin, Garrus, Jack, and Grunt. Any other missions and assignments not completed during Act 1 can still be completed during Act 2. Note that the order in which squadmates are recruited during Act 1 is entirely up to Shepard and will not affect how events play out in any way. </div>
+                    <div>You will also have the opportunity to perform various assignments -- some are available on Omega, some on the Citadel, and others you can discover during the process of Planet Scanning. Assignments described as N7 Assignments usually involve squad deployments and combat -- effectively small missions -- and provide experience, credits, and other rewards. All assignments are optional, but they help advance the story and provide the opportunity for additional rewards and items.</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="close-button" data-dismiss="modal" aria-label="Close" alt="close dialog">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 </body>
 </html>

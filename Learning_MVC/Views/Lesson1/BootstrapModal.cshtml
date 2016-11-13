@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "BootstrapModal";
+}
+
+<style>
+    dialog-one {
+        border-bottom: 1px dotted;
+        cursor: pointer;
+    }
+</style>
+
+@section scripts {
+<script>
+    $(document).ready(function () {
+        $('#dialog-one').click(function () {
+            $('#glossaryModal').modal('show');
+        })
+    });
+</script>
+}
+
+<h2>BootstrapModal</h2>
+
+<dialog-one id="dialog-one">Open Dialog 1</dialog-one>

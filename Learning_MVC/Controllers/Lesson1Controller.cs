@@ -53,5 +53,10 @@ namespace Learning_MVC.Controllers
             viewmodel.PhoneNumber = "240-516-7514";
             return View(viewmodel);
         }
+
+        public ActionResult BootstrapModal()
+        {
+            return View();
+        }
     }
 }
