@@ -60,7 +60,7 @@ namespace MVCWebApiClient.Controllers
 
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(content);
 
-            return Json(new { ProductsResul = products }, JsonRequestBehavior.AllowGet);
+            return View(products); //Json(new { ProductsResul = products }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult UseWebClient()

@@ -29,5 +29,7 @@ namespace MVCWebApiClient.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MVCWebApiClient.Product> Products { get; set; }
     }
 }
