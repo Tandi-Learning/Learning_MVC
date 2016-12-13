@@ -89,7 +89,7 @@ namespace MVCWebApiClient.Controllers
         public ActionResult UseHttpClient3()
         {
             // Using HttpMessageHandler
-            HttpClient client = new HttpClient(new MyHttpClientHandler2());
+            HttpClient client = new HttpClient(new MyHttpClientHandler1(new MyHttpClientHandler2()));
             string responseString = client.GetAsync("http://api.worldbank.org/countries?format=json").ContinueWith(
                 (requestTask) =>
                 {
