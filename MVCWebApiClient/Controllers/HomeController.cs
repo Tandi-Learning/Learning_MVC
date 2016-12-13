@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using MVCWebApiClient.Handler;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -61,6 +63,40 @@ namespace MVCWebApiClient.Controllers
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(content);
 
             return View(products); //Json(new { ProductsResul = products }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UseHttpClient2()
+        {
+            // just another play sample of HttpClient
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = client.GetAsync("http://api.worldbank.org/countries?format=json").Result;
+            response.EnsureSuccessStatusCode();
+            JArray content = JsonConvert.DeserializeObject<JArray>(response.Content.ReadAsStringAsync().Result);
+            List<Country> countries = new List<Country>();
+            foreach (var country in content[1])
+            {
+                countries.Add(new Country
+                {
+                    Name = country.Value<string>("name"),
+                    CapitalCity = country.Value<string>("capitalCity"),
+                    ISO2Code = country.Value<string>("iso2Code"),
+                });               
+            }
+
+            return View(countries); //Json(new { Countries = countries }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UseHttpClient3()
+        {
+            // Using HttpMessageHandler
+            HttpClient client = new HttpClient(new MyHttpClientHandler2());
+            string responseString = client.GetAsync("http://api.worldbank.org/countries?format=json").ContinueWith(
+                (requestTask) =>
+                {
+                    HttpResponseMessage response = requestTask.Result;
+                    return response.Content.ReadAsStringAsync().Result;
+                }).Result;
+            return Content(responseString);
         }
 
         public ActionResult UseWebClient()

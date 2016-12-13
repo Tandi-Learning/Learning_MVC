@@ -13,4 +13,11 @@ namespace MVCWebApiClient
         public int Price { get; set; }
     }
 
+    public class Country
+    {
+        public string Name { get; set; }
+        public string ISO2Code { get; set; }
+        public string CapitalCity { get; set; }
+    }
+
 }
