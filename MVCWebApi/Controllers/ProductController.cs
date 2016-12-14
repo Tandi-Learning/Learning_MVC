@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MVCWebApi.Controllers
 {
@@ -40,9 +41,11 @@ namespace MVCWebApi.Controllers
         }
 
         // POST: api/Product
+        [EnableCors(origins: "http://localhost:64845", headers: "*", methods: "*")]
         public void Post([FromBody]Product product)
         {
-            Products.instance.ProductList.Add(product);
+            if (!string.IsNullOrEmpty(product.CategoryName))
+                Products.instance.AddProduct(product);
         }
 
         // PUT: api/Product/5

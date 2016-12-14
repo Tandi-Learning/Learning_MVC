@@ -46,6 +46,7 @@ namespace MVCWebApi
 
         public void AddProduct(Product product)
         {
+            product.ProductId = _products.Count() + 1;
             _products.Add(product);
         }
     }
