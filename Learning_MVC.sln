@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26014.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning_MVC", "Learning_MVC\Learning_MVC.csproj", "{DE5DF9AE-3158-468E-BC51-0AD7BCF834B9}"
 EndProject
@@ -34,6 +34,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApi", "MVCWebApi\MVCWebApi.csproj", "{8E3F2B9B-94ED-4B17-B71F-8FB8C5906B75}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApiClient", "MVCWebApiClient\MVCWebApiClient.csproj", "{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExpenseTracker", "ExpenseTracker", "{0A3C2C2A-26DE-4D58-8278-84A6883370D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.API", "ExpenseTracker\ExpenseTracker.API\ExpenseTracker.API.csproj", "{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Constants", "ExpenseTracker\ExpenseTracker.Constants\ExpenseTracker.Constants.csproj", "{3FA80055-18B1-4E1D-8920-DDCAADD06B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.DTO", "ExpenseTracker\ExpenseTracker.DTO\ExpenseTracker.DTO.csproj", "{C1FC50AD-2DB6-42A1-8C22-93EB78C29116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Repository", "ExpenseTracker\ExpenseTracker.Repository\ExpenseTracker.Repository.csproj", "{EB835E5E-472F-45FF-B78D-049EC5CFCF09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,8 +99,30 @@ Global
 		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89D6936F-C745-43C7-BC2C-D7F2ADAE980D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA80055-18B1-4E1D-8920-DDCAADD06B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA80055-18B1-4E1D-8920-DDCAADD06B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA80055-18B1-4E1D-8920-DDCAADD06B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA80055-18B1-4E1D-8920-DDCAADD06B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FC50AD-2DB6-42A1-8C22-93EB78C29116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FC50AD-2DB6-42A1-8C22-93EB78C29116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FC50AD-2DB6-42A1-8C22-93EB78C29116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FC50AD-2DB6-42A1-8C22-93EB78C29116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB835E5E-472F-45FF-B78D-049EC5CFCF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB835E5E-472F-45FF-B78D-049EC5CFCF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB835E5E-472F-45FF-B78D-049EC5CFCF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB835E5E-472F-45FF-B78D-049EC5CFCF09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C64BF1CC-8203-4C2B-BCFB-5B5013C878EB} = {0A3C2C2A-26DE-4D58-8278-84A6883370D7}
+		{3FA80055-18B1-4E1D-8920-DDCAADD06B20} = {0A3C2C2A-26DE-4D58-8278-84A6883370D7}
+		{C1FC50AD-2DB6-42A1-8C22-93EB78C29116} = {0A3C2C2A-26DE-4D58-8278-84A6883370D7}
+		{EB835E5E-472F-45FF-B78D-049EC5CFCF09} = {0A3C2C2A-26DE-4D58-8278-84A6883370D7}
 	EndGlobalSection
 EndGlobal

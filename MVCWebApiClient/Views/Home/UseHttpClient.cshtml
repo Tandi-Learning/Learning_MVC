@@ -6,7 +6,7 @@
 
 <h2>UseHttpClient</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("http://localhost:55467/api/product"))
 {
     @Html.AntiForgeryToken()
 
@@ -38,6 +38,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <div class="btn btn-success" id="createButton">Create</div>
+                <input type="submit" value="Submit" />
             </div>
         </div>
     </div>
@@ -45,7 +46,7 @@
 
 <table class="table">
     @foreach (var item in Model)
-    {
+{
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
