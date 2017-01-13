@@ -1,5 +1,6 @@
 ﻿using ExpenseTracker.Repository;
 using ExpenseTracker.Repository.Factories;
+using Marvin.JsonPatch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,6 +101,37 @@ namespace ExpenseTracker.API.Controllers
                 else if (result.Status == RepositoryActionStatus.NotFound)
                 {
                     return NotFound();
+                }
+
+                return BadRequest();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
+
+        [HttpPatch]
+        public IHttpActionResult Patch(int id, [FromBody] JsonPatchDocument<DTO.ExpenseGroup> expenseGroupPatchDocument)
+        {
+            try
+            {
+                if (expenseGroupPatchDocument == null)
+                    return BadRequest();
+
+                var expenseGroup = _repository.GetExpenseGroup(id);
+                if (expenseGroup == null)
+                    return NotFound();
+
+                var eg = _expenseGroupFactory.CreateExpenseGroup(expenseGroup);
+                expenseGroupPatchDocument.ApplyTo(eg);
+
+                var result = _repository.UpdateExpenseGroup(_expenseGroupFactory.CreateExpenseGroup(eg));
+
+                if (result.Status == RepositoryActionStatus.Updated)
+                {
+                    var patchedExpenseGroup = _expenseGroupFactory.CreateExpenseGroup(result.Entity);
+                    return Ok(patchedExpenseGroup);
                 }
 
                 return BadRequest();
