@@ -41,5 +41,73 @@ namespace ExpenseTracker.API.Controllers
                 return InternalServerError();
             }
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                var expenseGroup = _repository.GetExpenseGroup(id);
+
+                if (expenseGroup == null)
+                    return NotFound();
+                else
+                    return Ok(expenseGroup);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
+
+        public IHttpActionResult Post([FromBody]DTO.ExpenseGroup expenseGroup)
+        {
+            try
+            {
+                if (expenseGroup == null)
+                    return BadRequest();
+
+                var eg = _expenseGroupFactory.CreateExpenseGroup(expenseGroup);
+                var result = _repository.InsertExpenseGroup(eg);
+
+                if (result.Status == RepositoryActionStatus.Created)
+                {
+                    var newExpenseGroup = _expenseGroupFactory.CreateExpenseGroup(result.Entity);
+                    return Created(Request.RequestUri + "/" + newExpenseGroup.Id.ToString(), newExpenseGroup);
+                }
+
+                return BadRequest();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
+
+        public IHttpActionResult Put(int id, [FromBody] DTO.ExpenseGroup expenseGroup)
+        {
+            try
+            {
+                if (expenseGroup == null)
+                    return BadRequest();
+
+                var eg = _expenseGroupFactory.CreateExpenseGroup(expenseGroup);
+                var result = _repository.UpdateExpenseGroup(eg);
+                if (result.Status == RepositoryActionStatus.Updated)
+                {
+                    var updatedExpenseGroup = _expenseGroupFactory.CreateExpenseGroup(result.Entity);
+                    return Ok(updatedExpenseGroup);
+                }
+                else if (result.Status == RepositoryActionStatus.NotFound)
+                {
+                    return NotFound();
+                }
+
+                return BadRequest();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
     }
 }
