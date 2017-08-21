@@ -1,0 +1,20 @@
+﻿@using Learning_MVC.Models;
+@model IEnumerable<BookModels>
+
+@{
+    ViewBag.Title = "IEnumerable Lesson";
+}
+
+<h2>IEnumerableLesson</h2>
+
+@foreach (var m in Model)
+{
+    <div style="margin-bottom: 10px;">
+        <div>
+            @m.Title
+        </div>
+        <div>
+            Author: @m.Author (@m.PublishedYear)
+        </div>
+    </div>
+}
